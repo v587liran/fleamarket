@@ -23,6 +23,11 @@
 			<result name="info">/pages/goods/goods_info.jsp</result>
 			<result name="typePre">/pages/goods/goods_add.jsp</result>
 		</action>
+		
+		<!-- 
+			这是一条注释
+		 -->
+		
 	</package>
 	
 	
