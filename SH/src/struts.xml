@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="my_project_default" extends="struts-default" abstract="true">
+		<global-results>
+			<result name="forward">/forward.jsp</result>
+			<result name="input">/error.jsp</result>
+		</global-results>
+	</package>
+	
+	
+	<package name="root" namespace="/"  extends="struts-default">
+		<action name="guser_*" class="org.action.GuserAction" method="{1}">
+			<result name="success">/pages/front/login_success.jsp</result>
+			<result name="fail">/pages/front/login_fail.jsp</result>
+			<result name="forward">/forward.jsp</result>
+		</action>
+		<action name="goods_*" class="org.action.GoodsAction" method="{1}">
+			<result name="success">/pages/front/login_success.jsp</result>
+			<result name="fail">/pages/front/login_success.jsp</result>
+			<result name="forward">/forward.jsp</result>
+			<result name="gerenfabulist">/pages/goods/goods_gerenfabulist.jsp</result>
+			<result name="info">/pages/goods/goods_info.jsp</result>
+			<result name="typePre">/pages/goods/goods_add.jsp</result>
+		</action>
+	</package>
+	
+	
+</struts>    
